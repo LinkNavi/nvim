@@ -37,7 +37,7 @@ return {
       -- Setup LuaSnip
       local luasnip = require("luasnip")
       require("luasnip.loaders.from_vscode").lazy_load()
-
+require("luasnip.loaders.from_lua").load({ paths = vim.fn.stdpath("config") .. "/lua/snippets/" })
       -- Setup nvim-cmp
       local cmp = require("cmp")
       
@@ -205,8 +205,6 @@ return {
       -- Setup mason-lspconfig
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls", "ts_ls", "pyright", "rust_analyzer",
-          "gopls", "clangd", "bashls", "jsonls",
         },
         automatic_installation = true,
       })
