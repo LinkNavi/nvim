@@ -40,7 +40,7 @@ vim.keymap.set("n", "d", '"_d', { noremap = true })
 vim.keymap.set("n", "x", '"_x', { noremap = true })
 vim.keymap.set("v", "d", '"_d', { noremap = true })
 vim.keymap.set("v", "x", '"_x', { noremap = true })
-
+vim.g.loaded_ftplugin_lua = 1
 -- Optional: allow easy clipboard copy/paste even without system clipboard set
 vim.keymap.set({"n", "v"}, "<leader>y", '"+y')
 vim.keymap.set({"n", "v"}, "<leader>p", '"+p')

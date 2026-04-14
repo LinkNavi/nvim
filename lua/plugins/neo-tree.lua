@@ -66,6 +66,12 @@ return {
               show_path = "relative",
             },
           },
+	   ["<C-r>"] = function(state)
+  local node = state.tree:get_node()
+  local path = node.type == "directory" and node:get_id() or vim.fn.fnamemodify(node:get_id(), ":h")
+  vim.cmd("cd " .. path)
+  require("neo-tree.sources.filesystem").reset_search(state)
+end,
           ["d"] = "delete",
           ["r"] = "rename",
           ["x"] = "cut_to_clipboard",

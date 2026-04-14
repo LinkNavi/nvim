@@ -109,4 +109,13 @@ wk.add({
   { "<leader>uc", "<cmd>lua vim.fn.setreg('+', vim.fn.expand('%:p'))<CR>", desc = "Copy File Path" },
   { "<leader>ur", "<cmd>edit!<CR>", desc = "Reload File" },
   { "<leader>uf", "<cmd>lua vim.lsp.buf.format()<CR>", desc = "Format Buffer" },
+
+-- Copilot
+  { "<leader>a", group = "AI / Copilot" },
+  { "<leader>ac", "<cmd>CopilotChat<CR>", desc = "Open Chat" },
+  { "<leader>at", "<cmd>CopilotChatToggle<CR>", desc = "Toggle Chat" },
+  { "<leader>ar", "<cmd>CopilotChatReset<CR>", desc = "Reset Chat" },
+  { "<leader>as", "<cmd>CopilotChatStop<CR>", desc = "Stop Output" },
+  { "<leader>ap", "<cmd>CopilotChatPrompts<CR>", desc = "Prompts" },
+  { "<leader>am", "<cmd>CopilotChatModels<CR>", desc = "Models" },
 })
