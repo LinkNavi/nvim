@@ -95,13 +95,21 @@ return {
       end,
     })
     
-    -- KEYMAPS (uncomment to enable)
-    -- vim.keymap.set('n', '<S-h>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
-    -- vim.keymap.set('n', '<S-l>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
-    -- vim.keymap.set('n', '<leader>bp', '<Cmd>BufferLineTogglePin<CR>', { desc = 'Pin buffer' })
-    -- vim.keymap.set('n', '<leader>bP', '<Cmd>BufferLineGroupClose ungrouped<CR>', { desc = 'Close unpinned buffers' })
-    -- vim.keymap.set('n', '<leader>br', '<Cmd>BufferLineCloseRight<CR>', { desc = 'Close buffers to right' })
-    -- vim.keymap.set('n', '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', { desc = 'Close buffers to left' })
-    -- vim.keymap.set('n', '<leader>bo', '<Cmd>BufferLineCloseOthers<CR>', { desc = 'Close other buffers' })
+   -- Move left/right
+vim.keymap.set('n', '<C-Left>', '<Cmd>BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
+vim.keymap.set('n', '<C-Right>', '<Cmd>BufferLineCycleNext<CR>', { desc = 'Next buffer' })
+
+-- Pin with Ctrl+Up
+vim.keymap.set('n', '<C-Up>', '<Cmd>BufferLineTogglePin<CR>', { desc = 'Pin buffer' })
+
+-- Close current with Ctrl+Down
+vim.keymap.set('n', '<C-Down>', '<Cmd>bdelete<CR>', { desc = 'Close buffer' })
+
+-- Close right/left with Ctrl+Shift+Right/Left
+vim.keymap.set('n', '<C-S-Right>', '<Cmd>BufferLineCloseRight<CR>', { desc = 'Close buffers to right' })
+vim.keymap.set('n', '<C-S-Left>', '<Cmd>BufferLineCloseLeft<CR>', { desc = 'Close buffers to left' })
+
+-- Close unpinned with Ctrl+Shift+Up
+vim.keymap.set('n', '<C-S-Up>', '<Cmd>BufferLineGroupClose ungrouped<CR>', { desc = 'Close unpinned buffers' })
   end
 }

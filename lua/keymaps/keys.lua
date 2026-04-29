@@ -16,26 +16,7 @@ wk.add({
   { "<leader>fc", "<cmd>cd %:p:h<CR>", desc = "Change Directory to File" },
   { "<leader>fs", "<cmd>Telescope grep_string<CR>", desc = "Search String" },
 
-  -- Buffer Management
-  { "<leader>b", group = "Buffers" },
-  { "<leader>bb", "<cmd>Telescope buffers<CR>", desc = "List Buffers" },
-  { "<leader>bd", "<cmd>bdelete<CR>", desc = "Delete Buffer" },
-  { "<leader>bn", "<cmd>bnext<CR>", desc = "Next Buffer" },
-  { "<leader>bp", "<cmd>bprevious<CR>", desc = "Previous Buffer" },
-  { "<leader>bs", "<cmd>w<CR>", desc = "Save Buffer" },
-  { "<leader>br", "<cmd>e!<CR>", desc = "Reload Buffer" },
 
-  -- Window Management
-  { "<leader>w", group = "Windows" },
-  { "<leader>wh", "<cmd>wincmd h<CR>", desc = "Move Left" },
-  { "<leader>wj", "<cmd>wincmd j<CR>", desc = "Move Down" },
-  { "<leader>wk", "<cmd>wincmd k<CR>", desc = "Move Up" },
-  { "<leader>wl", "<cmd>wincmd l<CR>", desc = "Move Right" },
-  { "<leader>ws", "<cmd>split<CR>", desc = "Horizontal Split" },
-  { "<leader>wv", "<cmd>vsplit<CR>", desc = "Vertical Split" },
-  { "<leader>wc", "<cmd>close<CR>", desc = "Close Window" },
-  { "<leader>wo", "<cmd>only<CR>", desc = "Close Other Windows" },
-  { "<leader>w=", "<cmd>wincmd =<CR>", desc = "Equal Size" },
 
   -- LSP Operations
   { "<leader>l", group = "LSP" },
@@ -51,31 +32,15 @@ wk.add({
   { "<leader>lp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Prev Diagnostic" },
   { "<leader>lR", "<cmd>Telescope lsp_references<CR>", desc = "References" },
 
-  -- Git Operations
-  { "<leader>g", group = "Git" },
-  { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "Git Status" },
-  { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "Git Commits" },
-  { "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "Git Branches" },
-  { "<leader>gd", "<cmd>Gvdiffsplit<CR>", desc = "Git Diff" },
-  { "<leader>ga", "<cmd>Git add .<CR>", desc = "Git Add All" },
-  { "<leader>gp", "<cmd>Git push<CR>", desc = "Git Push" },
-  { "<leader>gu", "<cmd>Git pull<CR>", desc = "Git Pull" },
+  { "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", desc = "Show Diagnostic" },
 
+ { "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", desc = "Diagnostic List" },
   -- Terminal
   { "<leader>t", group = "Terminal" },
   { "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", desc = "Floating Terminal" },
   { "<leader>tv", "<cmd>vsplit | terminal<CR>", desc = "Vertical Terminal" },
   { "<leader>th", "<cmd>split | terminal<CR>", desc = "Horizontal Terminal" },
 
-  -- Quick Actions
-  { "<leader>q", group = "Quick Actions" },
-  { "<leader>qq", "<cmd>qa<CR>", desc = "Quit All" },
-  { "<leader>qw", "<cmd>wqa<CR>", desc = "Save and Quit All" },
-  { "<leader>qf", "<cmd>qa!<CR>", desc = "Force Quit All" },
-  { "<leader>qr", "<cmd>source %<CR>", desc = "Reload Config" },
-  { "<leader>ql", "<cmd>Lazy<CR>", desc = "Lazy Plugin Manager" },
-  { "<leader>qm", "<cmd>Mason<CR>", desc = "Mason LSP Manager" },
-  { "<leader>qh", "<cmd>checkhealth<CR>", desc = "Check Health" },
 
   -- Themes & UI
   { "<leader>T", group = "Themes & UI" },
@@ -103,19 +68,5 @@ wk.add({
   { "<leader>cu", "<cmd>Lazy update<CR>", desc = "Update Plugins" },
   { "<leader>cS", "<cmd>Lazy sync<CR>", desc = "Sync Plugins" },
 
-  -- Utilities
-  { "<leader>u", group = "Utilities" },
-  { "<leader>uh", "<cmd>nohlsearch<CR>", desc = "Clear Highlights" },
-  { "<leader>uc", "<cmd>lua vim.fn.setreg('+', vim.fn.expand('%:p'))<CR>", desc = "Copy File Path" },
-  { "<leader>ur", "<cmd>edit!<CR>", desc = "Reload File" },
-  { "<leader>uf", "<cmd>lua vim.lsp.buf.format()<CR>", desc = "Format Buffer" },
 
--- Copilot
-  { "<leader>a", group = "AI / Copilot" },
-  { "<leader>ac", "<cmd>CopilotChat<CR>", desc = "Open Chat" },
-  { "<leader>at", "<cmd>CopilotChatToggle<CR>", desc = "Toggle Chat" },
-  { "<leader>ar", "<cmd>CopilotChatReset<CR>", desc = "Reset Chat" },
-  { "<leader>as", "<cmd>CopilotChatStop<CR>", desc = "Stop Output" },
-  { "<leader>ap", "<cmd>CopilotChatPrompts<CR>", desc = "Prompts" },
-  { "<leader>am", "<cmd>CopilotChatModels<CR>", desc = "Models" },
 })
