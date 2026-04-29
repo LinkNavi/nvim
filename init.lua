@@ -21,6 +21,9 @@ require("lazy").setup("plugins")
 -- Load your keymaps after plugins
 require("keymaps")
 
+-- Load Neovide Stuff
+require("neovide")
+
 -- Load which keys
 require("which-key").setup {}
 
@@ -34,7 +37,6 @@ require("mason").setup()
 
 -- Always use system clipboard for yanks and pastes
 vim.opt.clipboard = "unnamedplus"
-
 -- Don't overwrite your yank when deleting text
 vim.keymap.set("n", "d", '"_d', { noremap = true })
 vim.keymap.set("n", "x", '"_x', { noremap = true })
